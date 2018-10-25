@@ -29,8 +29,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Navigation
 !Left::Send {Home}
 !Right::Send {End}
-!Up::Send {ctrl down}{Up}{ctrl up}
-!Down::Send {ctrl down}{Down}{ctrl up}
+!Up::Send {Lctrl down}{Home}{Lctrl up}
+!Down::Send {Lctrl down}{End}{Lctrl up}
 
 
 ; Selection
