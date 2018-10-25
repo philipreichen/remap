@@ -22,7 +22,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 !-::Send, ^-
 !0::Send, ^0
 
-
+; Windows switching
 <#Tab::Send {LCtrl down}{Tab}{LCtrl up}
 <#+Tab::Send {Shift down}{LCtrl down}{Tab}{LCtrl up}{Shift up}
 
@@ -32,10 +32,11 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 !Up::Send {Lctrl down}{Home}{Lctrl up}
 !Down::Send {Lctrl down}{End}{Lctrl up}
 
-
 ; Selection
 <!+Left::Send {ctrl down}{shift down}{Left}{shift up}{ctrl up}
 <!+Right::Send {ctrl down}{shift down}{Right}{shift up}{ctrl up}
 
-return
+; Remap LButton&alt to behave like LButton&Ctrl in order to open links in background tabs in Chrome
+!LButton::Send {Lctrl down}{LButton}{Lctrl up}
 
+return
