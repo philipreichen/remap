@@ -22,18 +22,20 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 !-::Send, ^-
 !0::Send, ^0
 
-;LWin key
+
 <#Tab::Send {LCtrl down}{Tab}{LCtrl up}
 <#+Tab::Send {Shift down}{LCtrl down}{Tab}{LCtrl up}{Shift up}
 
 ; Navigation
-!Left::Send {ctrl down}{Left}{ctrl up}
-!Right::Send {ctrl down}{Right}{ctrl up}
+!Left::Send {Home}
+!Right::Send {End}
 !Up::Send {ctrl down}{Up}{ctrl up}
 !Down::Send {ctrl down}{Down}{ctrl up}
+
 
 ; Selection
 <!+Left::Send {ctrl down}{shift down}{Left}{shift up}{ctrl up}
 <!+Right::Send {ctrl down}{shift down}{Right}{shift up}{ctrl up}
 
 return
+
