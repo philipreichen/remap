@@ -5,6 +5,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 !q::Send, !{F4}
 !a::Send, ^a
+!b::Send, ^b
 !c::Send, ^c 
 !v::Send, ^v
 !k::Send, ^k
@@ -39,5 +40,6 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; Remap LButton&alt to behave like LButton&Ctrl in order to open links in background tabs in Chrome
 !LButton::Send {Lctrl down}{LButton}{Lctrl up}
+!Enter::Send {Lctrl down}{Enter}{Lctrl up}
 
 return
