@@ -6,17 +6,20 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 !q::Send, !{F4}
 !a::Send, ^a
 !b::Send, ^b
-!c::Send, ^c 
+!c::Send, ^c
+!e::Send, ^e 
 !v::Send, ^v
 !k::Send, ^k
 !w::Send, ^w
 !f::Send, ^f
+!i::Send, ^i
 !x::Send, ^x
 !l::Send, ^l
 !n::Send, ^n
 !r::Send, ^r
 !s::Send, ^s
 !t::Send, ^t
+!u::Send, ^u
 !z::Send, ^z
 !y::Send, ^y
 !=::Send, ^=
@@ -41,5 +44,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ; Remap LButton&alt to behave like LButton&Ctrl in order to open links in background tabs in Chrome
 !LButton::Send {Lctrl down}{LButton}{Lctrl up}
 !Enter::Send {Lctrl down}{Enter}{Lctrl up}
+
+; Remap Alt + Shift + M to Ctrl + Shift + M to be able to open personas on chrome with keyboard
+!+m::Send {LCtrl down}M{LCtrl up}
+
+; Remap Alt + Shift + N to Ctrl + Shift + M to be able to open incognito mode on Chrome
+!+n::Send {LCtrl down}N{LCtrl up}
+
 
 return
